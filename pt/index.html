@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Между плакатом и сердцем</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+  line-height:1.7;
+}
+
+header{
+  min-height:60vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  background:radial-gradient(circle at top, #1e293b, #020617);
+}
+
+header h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+header p{
+  max-width:700px;
+  opacity:.85;
+}
+
+.hero-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+button{
+  background:#38bdf8;
+  color:#020617;
+  border:none;
+  padding:12px 22px;
+  border-radius:999px;
+  font-size:14px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#0ea5e9;
+  transform:translateY(-2px);
+}
+
+section{
+  max-width:1000px;
+  margin:0 auto;
+  padding:60px 20px;
+}
+
+h2{
+  font-size:26px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:20px;
+  padding:30px;
+  margin-bottom:40px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Лента времени */
+.timeline ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.timeline-item{
+  margin-bottom:60px;
+  text-align:center;
+}
+
+.timeline-item strong{
+  font-size:18px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.timeline-image{
+  width:100%;
+  max-width:520px;
+  display:block;
+  margin:20px auto 10px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+  transition:0.3s;
+}
+
+.timeline-image:hover{
+  transform:scale(1.03);
+}
+
+.timeline-caption{
+  font-size:14px;
+  opacity:0.75;
+  max-width:520px;
+  margin:0 auto;
+}
+
+label{
+  display:block;
+  margin:8px 0;
+  cursor:pointer;
+}
+
+#out{
+  background:#0f172a;
+  padding:15px;
+  border-radius:12px;
+  margin-top:20px;
+  text-align:center;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:30px 0;
+  background:#1e293b;
+  font-size:14px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width:768px){
+
+  header h1{ font-size:24px; }
+  h2{ font-size:20px; }
+
+  .hero-buttons{
+    flex-direction:column;
+    width:100%;
+    max-width:300px;
+  }
+
+  button{
+    width:100%;
+  }
+
+  .card{
+    padding:20px;
+  }
+
+  section{
+    padding:40px 15px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Между плакатом и сердцем</h1>
+  <p><strong>Девиз проекта:</strong> «Что мы на самом деле чувствуем, когда нас хотят сделать лучше?»</p>
+  <div class="hero-buttons">
+    <button onclick="scrollToSection('timeline')">Лента времени</button>
+    <button onclick="scrollToSection('lab')">Пройти опрос</button>
+  </div>
+</header>
+
+<section id="timeline">
+  <h2>Лента времени развития социальной рекламы</h2>
+  <div class="card timeline">
+    <ul>
+
+      <li class="timeline-item">
+        <strong>1950–1970-е годы:</strong>
+        агитационные плакаты и коллективная ответственность.
+        <img src="images/1950.jpg.jpg" class="timeline-image" alt="Плакат 1960-х">
+        <p class="timeline-caption">
+          Советский производственный плакат 1960-х годов.
+          Директивная модель социальной рекламы,
+          основанная на дисциплине и общественном долге.
+        </p>
+      </li>
+
+      <li class="timeline-item">
+        <strong>1980–1990-е годы:</strong>
+        провокационные кампании United Colors of Benetton.
+        <img src="images/1990.jpg.jpg" class="timeline-image" alt="Benetton">
+        <p class="timeline-caption">
+          Использование сильных визуальных образов
+          для обсуждения социальных проблем и формирования общественного диалога.
+        </p>
+      </li>
+
+      <li class="timeline-item">
+        <strong>2000–2010-е годы:</strong>
+        эмоциональный сторителлинг.
+        <img src="images/2020.webp.jpg" class="timeline-image" alt="Подари жизнь">
+        <p class="timeline-caption">
+          Кампания «Подари жизнь».
+          Апелляция к эмпатии и личной вовлечённости зрителя.
+        </p>
+      </li>
+
+      <li class="timeline-item">
+        <strong>2020-е годы:</strong>
+        digital и вирусные форматы.
+        <img src="images/2000.jpg.webp" class="timeline-image" alt="Digital реклама">
+        <p class="timeline-caption">
+          Социальные кампании в TikTok и других сетях —
+          интерактивность и массовая вовлечённость аудитории.
+        </p>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<section id="lab">
+  <h2>Лаборатория восприятия</h2>
+  <div class="card">
+
+<form id="test">
+
+<p><strong>1. Что влияет на ваше мнение?</strong></p>
+<label><input type="radio" name="q1" value="empat"> Личные истории</label>
+<label><input type="radio" name="q1" value="analyst"> Факты и данные</label>
+<label><input type="radio" name="q1" value="pragmatic"> Практическая польза</label>
+
+<p><strong>2. Какая реклама запоминается?</strong></p>
+<label><input type="radio" name="q2" value="empat"> Эмоциональная</label>
+<label><input type="radio" name="q2" value="analyst"> Логичная</label>
+<label><input type="radio" name="q2" value="pragmatic"> Конкретная</label>
+
+<p><strong>3. Что вызывает доверие?</strong></p>
+<label><input type="radio" name="q3" value="empat"> Искренность</label>
+<label><input type="radio" name="q3" value="analyst"> Доказательства</label>
+<label><input type="radio" name="q3" value="pragmatic"> Чёткие рекомендации</label>
+
+<p><strong>4. Что меняет ваше поведение?</strong></p>
+<label><input type="radio" name="q4" value="empat"> Сильные эмоции</label>
+<label><input type="radio" name="q4" value="analyst"> Осознание фактов</label>
+<label><input type="radio" name="q4" value="pragmatic"> Понимание выгоды</label>
+
+<p><strong>5. Главное в социальной рекламе?</strong></p>
+<label><input type="radio" name="q5" value="empat"> Эмоциональное воздействие</label>
+<label><input type="radio" name="q5" value="analyst"> Просвещение</label>
+<label><input type="radio" name="q5" value="pragmatic"> Практическое решение</label>
+
+<p><strong>6. Лучший тон обращения —</strong></p>
+<label><input type="radio" name="q6" value="empat"> Искренний</label>
+<label><input type="radio" name="q6" value="analyst"> Рациональный</label>
+<label><input type="radio" name="q6" value="pragmatic"> Конкретный</label>
+
+<br>
+<button type="button" onclick="result()">Получить результат</button>
+
+</form>
+
+<p id="out"></p>
+
+  </div>
+</section>
+
+<section>
+  <h2>О проекте</h2>
+  <div class="card">
+    <p>
+      Проект выполнен в рамках индивидуального исследования.
+      Его цель — проанализировать эволюцию социальной рекламы
+      и выявить механизмы её психологического воздействия.
+    </p>
+    <p>
+      Работа объединяет теоретический анализ,
+      визуальные примеры и интерактивный опрос,
+      что подчёркивает практическую значимость исследования.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Индивидуальный проект • 11 класс • Социальная реклама
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function result(){
+  const answers = document.querySelectorAll('input[type="radio"]:checked');
+
+  if(answers.length < 6){
+    document.getElementById('out').innerText="Пожалуйста, ответьте на все вопросы.";
+    return;
+  }
+
+  let scores={empat:0,analyst:0,pragmatic:0};
+  answers.forEach(a=>scores[a.value]++);
+
+  const sorted=Object.entries(scores).sort((a,b)=>b[1]-a[1]);
+  const firstType=sorted[0][0];
+
+  const names={
+    empat:"Эмпат",
+    analyst:"Аналитик",
+    pragmatic:"Прагматик"
+  };
+
+  const desc={
+    empat:"Вы воспринимаете социальную рекламу через эмоции и личные истории.",
+    analyst:"Вы ориентированы на факты и логическую структуру.",
+    pragmatic:"Для вас важна практическая польза и конкретные действия."
+  };
+
+  document.getElementById('out').innerText=
+  "Вы — " + names[firstType] + ". " + desc[firstType];
+}
+</script>
+
+</body>
+</html>
